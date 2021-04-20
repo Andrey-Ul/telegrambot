@@ -15,8 +15,18 @@
 	<description>Telegram bot</description>
 	<properties>
 		<java.version>11</java.version>
+		<telegrambot.starter.version>5.1.1</telegrambot.starter.version>
+		<springboot.maven.plugin.version>2.3.10.RELEASE</springboot.maven.plugin.version>
 	</properties>
+
 	<dependencies>
+
+		<dependency>
+			<groupId>org.telegram</groupId>
+			<artifactId>telegrambots-spring-boot-starter</artifactId>
+			<version>${telegrambot.starter.version}</version>
+		</dependency>
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter</artifactId>
@@ -33,6 +43,7 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
+
 	</dependencies>
 
 	<build>
@@ -40,6 +51,7 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<version>${springboot.maven.plugin.version}</version>
 			</plugin>
 		</plugins>
 	</build>
